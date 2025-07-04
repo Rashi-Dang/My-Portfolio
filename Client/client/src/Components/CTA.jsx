@@ -1,6 +1,7 @@
 // components/CTA.jsx
 import React, { useEffect } from 'react';
 import './CTA.css';
+import { Link } from 'react-router-dom';
 
 const CTA = () => {
   useEffect(() => {
@@ -22,8 +23,10 @@ const CTA = () => {
       <h2>Let’s Build Something Amazing!</h2>
       <p>I’m open to freelance projects, collaborations, and internships.</p>
       <div className="cta-buttons">
-        <a href="/contact" className="btn primary">Let's Work Together</a>
-        <a href="/projects" className="btn secondary">See My Work</a>
+{/*         <a href="/contact" className="btn primary">Let's Work Together</a>
+        <a href="/projects" className="btn secondary">See My Work</a> */}
+        <Link to="/contact" className="btn primary">Let's Work Together</Link>
+         <Link to="/projects" className="btn secondary">See My Work</Link>
       </div>
     </section>
   );
