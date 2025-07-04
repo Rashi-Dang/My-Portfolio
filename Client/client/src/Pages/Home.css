@@ -1,0 +1,137 @@
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 0 5%;
+  background: linear-gradient(135deg, #FAFFCA, #B9D4AA);
+  gap: 2rem;
+  flex-wrap: wrap;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.home.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.home-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.home-left h1 {
+  font-size: 3rem;
+  color: #5A827E;
+}
+
+.home-left h2 {
+  font-size: 2rem;
+  color: #84AE92;
+  margin-bottom: 1rem;
+}
+
+.home-left p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.home-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.primary {
+  background-color: #5A827E;
+  color: #fff;
+}
+
+.primary:hover {
+  background-color: #84AE92;
+}
+
+.secondary {
+  background-color: #B9D4AA;
+  color: #333;
+}
+
+.secondary:hover {
+  background-color: #A0C894;
+}
+
+.home-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 300px;
+}
+
+.tech-img {
+  width: 100%;
+  max-width: 350px;      
+  height: auto;         
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  animation: float 3s ease-in-out infinite;
+  object-fit: cover;    
+  margin-top: 0;        
+}
+
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 100px;
+  }
+  .home-left h1 {
+    font-size: 2.4rem;
+  }
+  .home-left h2 {
+    font-size: 1.6rem;
+  }
+  .home-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .home-buttons {
+    justify-content: center; /* ✅ Center the buttons */
+    flex-direction: column;  /* ✅ Stack vertically */
+    align-items: center;     /* ✅ Center align each */
+  }
+
+  .home-buttons a {
+    width: 80%;              /* Optional: full-width buttons on mobile */
+    text-align: center;
+  }
+}
+
+}
+/* @media (max-width: 600px) {
+  .home-right img {
+    max-width: 280px;
+  }
+} */

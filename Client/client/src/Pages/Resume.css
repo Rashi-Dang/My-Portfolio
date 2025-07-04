@@ -1,0 +1,97 @@
+/* Resume.css */
+.resume-section {
+  padding: 80px 10%;
+  background-color: #FAFFCA;
+  text-align: center;
+}
+
+.resume-section h2 {
+  font-size: 2.5rem;
+  color: #5A827E;
+  margin-bottom: 2rem;
+}
+
+.resume-form {
+  max-width: 600px;
+  margin: 0 auto 30px;
+  background-color: #B9D4AA;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  animation: slide-up 0.8s ease;
+}
+
+.resume-form input {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.resume-form button {
+  background-color: #5A827E;
+  color: white;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.resume-form button:hover {
+  background-color: #3c5d58;
+}
+
+.success-msg {
+  margin-top: 12px;
+  color: green;
+  font-weight: 500;
+  animation: fade-in 0.5s ease-in;
+}
+
+.view-resume-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #84AE92;
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.view-resume-btn:hover {
+  background-color: #5A827E;
+}
+
+/* Animations */
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .resume-form {
+    padding: 30px 20px;
+  }
+
+  .resume-section h2 {
+    font-size: 2rem;
+  }
+}

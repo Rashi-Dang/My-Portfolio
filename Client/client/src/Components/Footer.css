@@ -1,0 +1,37 @@
+.footer {
+  background-color: #5A827E;
+  color: #fff;
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 1rem;
+  position: relative;
+  z-index: 10;
+}
+
+.footer p {
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icons a {
+  color: #FAFFCA;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: #B9D4AA;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    font-size: 0.95rem;
+  }
+}

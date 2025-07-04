@@ -1,0 +1,19 @@
+.typewriter {
+  font-size: 1.8rem;
+  color: #5A827E;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.cursor {
+  display: inline-block;
+  width: 1px;
+  background-color: #5A827E;
+  animation: blink 0.7s infinite;
+  margin-left: 4px;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}

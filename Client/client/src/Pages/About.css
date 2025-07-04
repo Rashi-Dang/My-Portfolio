@@ -1,0 +1,41 @@
+.about-section {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #B9D4AA, #FAFFCA);
+  padding: 100px 10% 50px 10%;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-in-out;
+}
+
+.about-section.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-content h2 {
+  font-size: 2.5rem;
+  color: #5A827E;
+  margin-bottom: 1rem;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .about-content h2 {
+    font-size: 2rem;
+  }
+  .about-content p {
+    font-size: 1rem;
+  }
+}
