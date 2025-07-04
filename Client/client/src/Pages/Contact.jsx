@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import './Contact.css';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
+   const [formData, setFormData] = useState({
     name: '', email: '', message: ''
   });
 
@@ -16,7 +16,7 @@ const Contact = () => {
   const handleSubmit = async e => {
     e.preventDefault();
     try {
-      const res = await fetch('http://localhost:5000/api/contact', {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/contact`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
@@ -25,6 +25,7 @@ const Contact = () => {
       if (res.ok) {
         setSuccess(true);
         setFormData({ name: '', email: '', message: '' });
+        setTimeout(() => setSuccess(false), 3000);
       }
     } catch (err) {
       console.error('Contact Error:', err);

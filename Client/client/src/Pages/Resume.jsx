@@ -3,14 +3,13 @@ import React, { useEffect, useState } from 'react';
 import './Resume.css';
 
 const Resume = () => {
-  const [resumeUrl, setResumeUrl] = useState('');
+ const [resumeUrl, setResumeUrl] = useState('');
   const [saved, setSaved] = useState(false);
 
   useEffect(() => {
-    // fetch existing resume
     const fetchResume = async () => {
       try {
-        const res = await fetch('http://localhost:5000/api/resume');
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/resume`);
         const data = await res.json();
         if (data && data.resumeUrl) {
           setResumeUrl(data.resumeUrl);
@@ -26,7 +25,7 @@ const Resume = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch('http://localhost:5000/api/resume', {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/resume`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ resumeUrl })
